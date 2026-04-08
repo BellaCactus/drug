@@ -1,0 +1,8 @@
+body{margin:0;background:#070707;color:#fff;font-family:system-ui}
+.layout{display:flex;height:100vh}
+.sidebar{width:260px;background:#0b0b0b;padding:10px;overflow:auto}
+.content{flex:1;padding:20px;overflow:auto}
+.section{border:1px solid #222;margin-bottom:10px}
+.section h2{cursor:pointer;padding:10px;background:#111}
+.inner{display:none;padding:10px}
+.drug img{width:150px;height:150px;border:1px solid #333;margin-bottom:6px}
