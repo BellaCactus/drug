@@ -1,255 +1,241 @@
+<!--
+FULL STATIC SITE REPO STRUCTURE
+
+/ (root)
+  index.html
+  styles.css
+  script.js
+  /data
+    notes.json
+  /images
+    (PLACEHOLDER IMAGES FOR EACH COMPOUND)
+
+INSTRUCTIONS:
+- Replace images in /images with real compound images (same filenames)
+- Edit data/notes.json to tweak content
+-->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>drug notes journal</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>compound archive</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
 
-<style>
+<div class="layout">
+
+  <!-- SIDEBAR (matches your doc tabs) -->
+  <aside class="sidebar">
+    <input type="text" id="search" placeholder="search...">
+    <div id="tabs"></div>
+  </aside>
+
+  <!-- MAIN CONTENT -->
+  <main class="content">
+    <h1>compound notes</h1>
+    <div id="content"></div>
+  </main>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
+
+/* ===================== styles.css ===================== */
+
 body {
-    background-color: #0b0b0f;
-    color: #d6d6e7;
-    font-family: "Courier New", monospace;
-    line-height: 1.6;
-    padding: 40px;
-    max-width: 900px;
-    margin: auto;
+  margin:0;
+  font-family: system-ui;
+  background:#070707;
+  color:#f7f7f7;
 }
 
-h1, h2, h3 {
-    color: #a78bfa;
+.layout {
+  display:flex;
+  height:100vh;
 }
 
-h1 {
-    font-size: 2.2em;
-    margin-bottom: 10px;
+.sidebar {
+  width:260px;
+  border-right:1px solid #222;
+  padding:10px;
+  overflow:auto;
+  background:#0b0b0b;
 }
 
-h2 {
-    margin-top: 40px;
-    border-bottom: 1px solid #2a2a3a;
-    padding-bottom: 5px;
+.sidebar input {
+  width:100%;
+  padding:8px;
+  margin-bottom:10px;
+  background:#111;
+  border:1px solid #333;
+  color:white;
 }
 
-h3 {
-    margin-top: 25px;
+.tab {
+  padding:8px;
+  cursor:pointer;
+  color:#bbb;
 }
 
-p {
-    margin: 8px 0;
+.tab.active {
+  color:#ff78c8;
+}
+
+.content {
+  flex:1;
+  overflow:auto;
+  padding:20px;
 }
 
 .section {
-    margin-bottom: 30px;
+  border:1px solid #222;
+  margin-bottom:10px;
+  border-radius:8px;
 }
 
-.note {
-    color: #9ca3af;
-    font-style: italic;
+.section h2 {
+  margin:0;
+  padding:10px;
+  cursor:pointer;
+  background:#111;
 }
 
-hr {
-    border: none;
-    border-top: 1px solid #2a2a3a;
-    margin: 40px 0;
+.section .inner {
+  display:none;
+  padding:10px;
 }
 
-.badge {
-    display: inline-block;
-    background: #1f1f2e;
-    padding: 3px 8px;
-    border-radius: 6px;
-    font-size: 0.8em;
-    margin-left: 8px;
-    color: #c4b5fd;
+.drug {
+  margin-bottom:20px;
 }
 
-</style>
-</head>
+.drug img {
+  width:200px;
+  height:200px;
+  object-fit:cover;
+  display:block;
+  margin-bottom:10px;
+  border:1px solid #333;
+}
 
-<body>
+/* ===================== script.js ===================== */
 
-<h1>drug notes journal <span class="badge">personal</span></h1>
+fetch('data/notes.json')
+.then(r=>r.json())
+.then(data=>{
+  const tabsDiv = document.getElementById('tabs');
+  const contentDiv = document.getElementById('content');
+  const search = document.getElementById('search');
 
-<p class="note">
-educational / personal notes. not instructions or encouragement.
-</p>
+  let current = null;
 
-<hr>
+  function renderTabs(){
+    tabsDiv.innerHTML='';
+    Object.keys(data).forEach(key=>{
+      const el=document.createElement('div');
+      el.className='tab';
+      el.textContent=key;
+      el.onclick=()=>{
+        current=key;
+        renderContent();
+        document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));
+        el.classList.add('active');
+      };
+      tabsDiv.appendChild(el);
+    });
+  }
 
-<h2>meta understanding</h2>
+  function renderContent(){
+    contentDiv.innerHTML='';
+    if(!current) return;
 
-<p>
-drugs can be understood in 3 layers:
-</p>
+    Object.keys(data[current]).forEach(section=>{
+      const sec=document.createElement('div');
+      sec.className='section';
 
-<p>
-structure → what it is chemically (shape, rigidity, substitutions)<br>
-receptor → what it binds to (5-HT2A, dopamine, μ-opioid, etc.)<br>
-effect → what it feels like (visuals, stimulation, sedation, delirium)
-</p>
+      const h=document.createElement('h2');
+      h.textContent=section;
+      h.onclick=()=>{
+        inner.style.display = inner.style.display==='block'?'none':'block';
+      };
 
-<p class="note">
-interesting note: if you know structure + receptor, you can usually predict the effect pretty well
-</p>
+      const inner=document.createElement('div');
+      inner.className='inner';
 
-<hr>
+      data[current][section].forEach(drug=>{
+        const d=document.createElement('div');
+        d.className='drug';
 
-<h2>psychedelics / phenethylamines</h2>
+        const img=document.createElement('img');
+        img.src='images/'+drug.image;
 
-<div class="section">
-<h3>2C-E</h3>
-<p>
-potent psychedelic phenethylamine with duration around 8–12 hours, longer than 2C-B and generally more intense<br>
-acts as a 5-HT2A receptor agonist, producing strong visuals, deep introspection, and a heavier, more analytical headspace<br>
-less euphoric and more mentally demanding compared to 2C-B, with more pronounced body load (tension, nausea in some cases)<br>
-visuals tend to be sharper and more geometric, with stronger alteration of perception and thought patterns
-</p>
-<p class="note">
-interesting note: often described as a more serious, less “fun” version of 2C-B
-</p>
-</div>
+        const title=document.createElement('h3');
+        title.textContent=drug.name;
 
-<div class="section">
-<h3>Bromo-DragonFLY</h3>
-<p>
-extremely potent benzodifuran psychedelic with duration typically 18–36+ hours<br>
-strong 5-HT2A receptor agonist with vasoconstriction effects<br>
-rigid structure increases binding and slows dissociation
-</p>
-<p class="note">
-interesting note: feels “locked-in” due to structural rigidity
-</p>
-</div>
+        const desc=document.createElement('p');
+        desc.textContent=drug.desc;
 
-<div class="section">
-<h3>2C-B</h3>
-<p>
-moderate duration (4–8 hours)<br>
-visuals, euphoria, tactile enhancement<br>
-more social and manageable than LSD
-</p>
-<p class="note">
-interesting note: halfway between MDMA and LSD
-</p>
-</div>
+        d.appendChild(img);
+        d.appendChild(title);
+        d.appendChild(desc);
+        inner.appendChild(d);
+      });
 
-<hr>
+      sec.appendChild(h);
+      sec.appendChild(inner);
+      contentDiv.appendChild(sec);
+    });
+  }
 
-<h2>opioids</h2>
+  search.addEventListener('input', ()=>{
+    const q=search.value.toLowerCase();
+    document.querySelectorAll('.drug').forEach(d=>{
+      d.style.display = d.textContent.toLowerCase().includes(q)?'block':'none';
+    });
+  });
 
-<div class="section">
-<h3>Fentanyl</h3>
-<p>
-μ-opioid receptor agonist<br>
-rapid brain penetration due to lipophilicity
-</p>
-<p class="note">
-interesting note: baseline reference for extreme potency
-</p>
-</div>
+  renderTabs();
+});
 
-<div class="section">
-<h3>Carfentanil</h3>
-<p>
-~100x fentanyl potency<br>
-extremely small doses active
-</p>
-</div>
+/* ===================== data/notes.json ===================== */
 
-<div class="section">
-<h3>Ohmefentanyl</h3>
-<p>
-multiple isomers with varying potency<br>
-tiny structural differences massively change strength
-</p>
-</div>
-
-<hr>
-
-<h2>stimulants</h2>
-
-<div class="section">
-<h3>MDPV</h3>
-<p>
-dopamine/norepinephrine reuptake inhibitor<br>
-extreme stimulation and potential psychosis
-</p>
-</div>
-
-<div class="section">
-<h3>Desoxypipradrol</h3>
-<p>
-very long duration stimulant<br>
-effects can last 24–72+ hours
-</p>
-</div>
-
-<hr>
-
-<h2>deliriants / anticholinergics</h2>
-
-<div class="section">
-<h3>Scopolamine</h3>
-<p>
-blocks acetylcholine receptors<br>
-causes true delirium and confusion
-</p>
-</div>
-
-<div class="section">
-<h3>Diphenhydramine</h3>
-<p>
-normal antihistamine<br>
-at high doses causes delirium
-</p>
-</div>
-
-<hr>
-
-<h2>chemistry patterns</h2>
-
-<p>
-benzodifurans → rigid phenethylamines → longer duration<br>
-thio substitution → heavier effects, altered metabolism<br>
-halogens → potency and binding changes<br>
-n-substitution → massive potency shifts (especially opioids)
-</p>
-
-<hr>
-
-<h2>shulgin</h2>
-
-<p>
-Alexander Shulgin<br>
-PiHKAL → phenethylamines<br>
-TiHKAL → tryptamines
-</p>
-
-<p class="note">
-interesting note: combined chemistry + personal documentation
-</p>
-
-<hr>
-
-<h2>favorites / interesting compounds</h2>
-
-<p>
-bromo-dragonfly → extreme structure + duration<br>
-2c-b → balanced reference psychedelic<br>
-2c-e → analytical and intense<br>
-al-lad → visual-focused LSD analog<br>
-25i-nbome → extremely potent but risky<br>
-carfentanil → extreme opioid potency<br>
-ohmefentanyl → isomer-based potency shifts<br>
-desoxypipradrol → duration-driven risk<br>
-diphenhydramine → dose-dependent delirium
-</p>
-
-<hr>
-
-<p class="note">
-last updated: 2026-04-08
-</p>
-
-</body>
-</html>
+{
+  "psychedelics": {
+    "phenethylamines": [
+      {
+        "name":"2C-E",
+        "image":"2c-e.jpg",
+        "desc":"potent psychedelic phenethylamine, 8-12h duration"
+      },
+      {
+        "name":"Bromo-DragonFLY",
+        "image":"bromo-dragonfly.jpg",
+        "desc":"extremely potent, 18-36h duration"
+      },
+      {
+        "name":"2C-B",
+        "image":"2c-b.jpg",
+        "desc":"moderate psychedelic, 4-8h"
+      }
+    ]
+  },
+  "opioids": {
+    "fentanyl family": [
+      {
+        "name":"Fentanyl",
+        "image":"fentanyl.jpg",
+        "desc":"strong opioid agonist"
+      },
+      {
+        "name":"Carfentanil",
+        "image":"carfentanil.jpg",
+        "desc":"extremely potent opioid"
+      }
+    ]
+  }
+}
