@@ -1,21 +1,1702 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>compound archive</title>
-<link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>drug notes // bella cactus</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div class="layout">
-<aside class="sidebar">
-<input id="search" placeholder="search...">
-<div id="tabs"></div>
-</aside>
-<main class="content">
-<h1>compound archive</h1>
-<div id="content"></div>
-</main>
+
+<!-- ═══════════════ SIDEBAR ═══════════════ -->
+<nav id="sidebar">
+  <div id="sidebar-header">
+    <div id="sidebar-title">drug notes</div>
+    <div id="sidebar-sub">// reference database</div>
+  </div>
+  <div id="sidebar-search">
+    <input type="text" id="sidebar-search-input" placeholder="filter sections...">
+  </div>
+  <div id="sidebar-nav">
+
+    <div class="nav-section-label">// main notes</div>
+    <a class="nav-link" onclick="scrollTo('psychedelics-phenethylamines')">psychedelics / phenethylamines</a>
+    <a class="nav-link" onclick="scrollTo('benzodifurans')">benzodifurans (dragonfly)</a>
+    <a class="nav-link" onclick="scrollTo('lsd-analogs')">lsd analogs</a>
+    <a class="nav-link" onclick="scrollTo('nbome-nboh')">nbome / nboh</a>
+    <a class="nav-link" onclick="scrollTo('opioids')">opioids</a>
+    <a class="nav-link" onclick="scrollTo('stimulants')">stimulants</a>
+    <a class="nav-link" onclick="scrollTo('deliriants')">deliriants / anticholinergics</a>
+    <a class="nav-link" onclick="scrollTo('cocaine')">cocaine / stimulants</a>
+    <a class="nav-link" onclick="scrollTo('mood-stabilizer')">mood stabilizer</a>
+    <a class="nav-link" onclick="scrollTo('shulgin')">shulgin</a>
+
+    <div class="nav-section-label">// duration</div>
+    <a class="nav-link" onclick="scrollTo('longest-duration')">longest duration ever</a>
+    <a class="nav-link" onclick="scrollTo('outliers')">outliers (ibogaine)</a>
+
+    <div class="nav-section-label">// potency</div>
+    <a class="nav-link" onclick="scrollTo('smallest-dose')">smallest active dose</a>
+    <a class="nav-link" onclick="scrollTo('extreme-lower')">extreme lower limits</a>
+
+    <div class="nav-section-label">// understanding</div>
+    <a class="nav-link" onclick="scrollTo('combined')">combined understanding</a>
+    <a class="nav-link" onclick="scrollTo('benzodifurans-deep')">benzodifurans deep dive</a>
+    <a class="nav-link" onclick="scrollTo('analog-patterns')">analog patterns</a>
+
+    <div class="nav-section-label">// master table</div>
+    <a class="nav-link" onclick="scrollTo('table-psychedelics')">phenethylamines table</a>
+    <a class="nav-link" onclick="scrollTo('table-amphetamines')">psychedelic amphetamines</a>
+    <a class="nav-link" onclick="scrollTo('table-lsd')">lsd / tryptamines table</a>
+    <a class="nav-link" onclick="scrollTo('table-nbome')">nbome / nboh table</a>
+    <a class="nav-link" onclick="scrollTo('table-opioids')">opioids table</a>
+    <a class="nav-link" onclick="scrollTo('table-stimulants')">stimulants table</a>
+    <a class="nav-link" onclick="scrollTo('table-deliriants')">deliriants table</a>
+    <a class="nav-link" onclick="scrollTo('table-cocaine')">cocaine table</a>
+    <a class="nav-link" onclick="scrollTo('summary')">overall summary</a>
+    <a class="nav-link" onclick="scrollTo('favorites')">favorites / most interesting</a>
+  </div>
+</nav>
+
+<!-- ═══════════════ MAIN ═══════════════ -->
+<div id="main">
+
+  <!-- TOP BAR -->
+  <div id="topbar">
+    <div id="search-wrap">
+      <input type="text" id="main-search" placeholder="search all compounds, notes, mechanisms...">
+    </div>
+    <div id="search-count"></div>
+  </div>
+
+  <!-- CONTENT -->
+  <div id="content">
+
+    <!-- ═══ SECTION: DRUG NOTES ═══ -->
+    <div class="page-section">
+      <div class="page-section-title">drug notes</div>
+
+      <!-- psychedelics / phenethylamines -->
+      <div class="category open" id="psychedelics-phenethylamines">
+        <div class="category-header" onclick="toggleCategory(this)">
+          <span class="category-toggle">▶</span>
+          <span class="category-name">psychedelics / phenethylamines</span>
+          <span class="category-count">8 compounds</span>
+        </div>
+        <div class="category-body">
+
+          <div class="drug-card" data-drug="2C-E">
+            <div class="drug-card-inner">
+              <div class="drug-img-wrap">
+                <img src="images/2c-e.png" alt="2C-E" class="drug-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+                <div class="drug-img-placeholder" style="display:none"><span>⬡</span></div>
+                <div class="drug-img-filename">2c-e.png</div>
+              </div>
+              <div class="drug-content">
+                <div class="drug-name">2C-E</div>
+                <div class="drug-notes">
+                  <ul>
+                    <li>potent psychedelic phenethylamine with duration around 8–12 hours, longer than 2C-B and generally more intense</li>
+                    <li>acts as a <strong>5-HT2A receptor agonist</strong>, producing strong visuals, deep introspection, and a heavier, more analytical headspace</li>
+                    <li>less euphoric and more mentally demanding compared to 2C-B, with more pronounced body load (tension, nausea in some cases)</li>
+                    <li>visuals tend to be sharper and more geometric, with stronger alteration of perception and thought patterns</li>
+                  </ul>
+                  <div class="interesting-note">often described as a more serious, less "fun" version of 2C-B, with stronger cognitive depth and intensity</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="drug-card" data-drug="Bromo-DragonFLY">
+            <div class="drug-card-inner">
+              <div class="drug-img-wrap">
+                <img src="images/bromo-dragonfly.png" alt="Bromo-DragonFLY" class="drug-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+                <div class="drug-img-placeholder" style="display:none"><span>⬡</span></div>
+                <div class="drug-img-filename">bromo-dragonfly.png</div>
+              </div>
+              <div class="drug-content">
+                <div class="drug-name">Bromo-DragonFLY</div>
+                <div class="drug-notes">
+                  <ul>
+                    <li>extremely potent benzodifuran psychedelic with duration typically 18–36+ hours, sometimes longer in toxic cases due to slow metabolism</li>
+                    <li>acts as a very strong <strong>5-HT2A receptor agonist</strong>, with additional peripheral serotonin activity causing vasoconstriction (blood vessel narrowing)</li>
+                    <li>rigid benzodifuran structure increases receptor binding affinity and slows dissociation, meaning it stays active much longer than flexible molecules</li>
+                    <li>physical risks include vasoconstriction, numbness, and potential tissue damage in severe cases</li>
+                  </ul>
+                  <div class="interesting-note">feels like a "locked-in" phenethylamine because the structure physically limits flexibility, so it doesn't disengage easily</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="drug-card" data-drug="2C-B">
+            <div class="drug-card-inner">
+              <div class="drug-img-wrap">
+                <img src="images/2c-b.png" alt="2C-B" class="drug-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+                <div class="drug-img-placeholder" style="display:none"><span>⬡</span></div>
+                <div class="drug-img-filename">2c-b.png</div>
+              </div>
+              <div class="drug-content">
+                <div class="drug-name">2C-B</div>
+                <div class="drug-notes">
+                  <ul>
+                    <li>moderate duration psychedelic (4–8 hours) acting primarily as a <strong>5-HT2A receptor agonist</strong></li>
+                    <li>produces visuals, euphoria, tactile enhancement, and mild stimulation</li>
+                    <li>relatively low receptor binding strength compared to stronger psychedelics, which is why it's shorter and more manageable</li>
+                    <li>less intense cognitive disruption compared to LSD, making it more social and "recreational"</li>
+                  </ul>
+                  <div class="interesting-note">often described as halfway between MDMA (body/euphoria) and LSD (visuals)</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="drug-card" data-drug="2C-G">
+            <div class="drug-card-inner">
+              <div class="drug-img-wrap">
+                <img src="images/2c-g.png" alt="2C-G" class="drug-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+                <div class="drug-img-placeholder" style="display:none"><span>⬡</span></div>
+                <div class="drug-img-filename">2c-g.png</div>
+              </div>
+              <div class="drug-content">
+                <div class="drug-name">2C-G</div>
+                <div class="drug-notes">
+                  <ul>
+                    <li>rare long-duration 2C compound lasting up to ~30 hours</li>
+                    <li>likely acts on serotonin receptors similarly to other 2C compounds but with slower metabolism or stronger binding</li>
+                    <li>produces extended mild-to-moderate psychedelic effects without the same intensity peak as shorter compounds</li>
+                  </ul>
+                  <div class="interesting-note">basically the same "2C idea" but stretched across a full day</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="drug-card" data-drug="2C-T-7">
+            <div class="drug-card-inner">
+              <div class="drug-img-wrap">
+                <img src="images/2c-t-7.png" alt="2C-T-7" class="drug-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+                <div class="drug-img-placeholder" style="display:none"><span>⬡</span></div>
+                <div class="drug-img-filename">2c-t-7.png</div>
+              </div>
+              <div class="drug-content">
+                <div class="drug-name">2C-T-7</div>
+                <div class="drug-notes">
+                  <ul>
+                    <li>psychedelic phenethylamine with <strong>thio (sulfur) substitution</strong>, affecting metabolism and receptor interaction</li>
+                    <li>acts on serotonin receptors but with more body load and variability in effects</li>
+                    <li>associated with nausea, vasoconstriction, and unpredictable responses at higher doses</li>
+                  </ul>
+                  <div class="interesting-note">sulfur substitution changes how the molecule interacts with the body, often making it heavier and less predictable</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="drug-card" data-drug="DOB">
+            <div class="drug-card-inner">
+              <div class="drug-img-wrap">
+                <img src="images/dob.png" alt="DOB" class="drug-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+                <div class="drug-img-placeholder" style="display:none"><span>⬡</span></div>
+                <div class="drug-img-filename">dob.png</div>
+              </div>
+              <div class="drug-content">
+                <div class="drug-name">DOB</div>
+                <div class="drug-notes">
+                  <ul>
+                    <li>long-lasting psychedelic amphetamine (~18–30 hours)</li>
+                    <li>combines <strong>5-HT2A agonism</strong> with stimulant effects from amphetamine backbone</li>
+                    <li>amphetamine structure slows metabolism and increases duration and stimulation</li>
+                    <li>produces strong visuals, stimulation, and long plateau phase</li>
+                  </ul>
+                  <div class="interesting-note">adding an amphetamine backbone dramatically increases duration compared to 2C compounds</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="drug-card" data-drug="Aleph-1">
+            <div class="drug-card-inner">
+              <div class="drug-img-wrap">
+                <img src="images/aleph-1.png" alt="Aleph-1" class="drug-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+                <div class="drug-img-placeholder" style="display:none"><span>⬡</span></div>
+                <div class="drug-img-filename">aleph-1.png</div>
+              </div>
+              <div class="drug-content">
+                <div class="drug-name">Aleph-1</div>
+                <div class="drug-notes">
+                  <ul>
+                    <li>obscure compound from Shulgin's work with limited human data</li>
+                    <li>likely acts similarly to other psychedelic amphetamines with long duration and strong effects</li>
+                    <li>not well studied, but known to be intense and long-lasting</li>
+                  </ul>
+                  <div class="interesting-note">one of the deeper PiHKAL entries that shows how far the chemistry was explored</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="drug-card" data-drug="TMA-6">
+            <div class="drug-card-inner">
+              <div class="drug-img-wrap">
+                <img src="images/tma-6.png" alt="TMA-6" class="drug-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+                <div class="drug-img-placeholder" style="display:none"><span>⬡</span></div>
+                <div class="drug-img-filename">tma-6.png</div>
+              </div>
+              <div class="drug-content">
+                <div class="drug-name">TMA-6</div>
+                <div class="drug-notes">
+                  <ul>
+                    <li>part of the trimethoxyamphetamine family</li>
+                    <li>acts on serotonin receptors with relatively subtle but long-lasting effects</li>
+                    <li>less potent visually but still structurally important</li>
+                  </ul>
+                  <div class="interesting-note">shows early development of psychedelic amphetamine structures</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- benzodifurans -->
+      <div class="category" id="benzodifurans">
+        <div class="category-header" onclick="toggleCategory(this)">
+          <span class="category-toggle">▶</span>
+          <span class="category-name">benzodifurans (dragonfly family)</span>
+          <span class="category-count">3 compounds</span>
+        </div>
+        <div class="category-body">
+
+          <div class="drug-card" data-drug="2C-B-FLY">
+            <div class="drug-card-inner">
+              <div class="drug-img-wrap">
+                <img src="images/2c-b-fly.png" alt="2C-B-FLY" class="drug-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+                <div class="drug-img-placeholder" style="display:none"><span>⬡</span></div>
+                <div class="drug-img-filename">2c-b-fly.png</div>
+              </div>
+              <div class="drug-content">
+                <div class="drug-name">2C-B-FLY</div>
+                <div class="drug-notes">
+                  <ul>
+                    <li>benzodifuran version of 2C-B with more rigid structure</li>
+                    <li>longer duration and slightly increased potency compared to 2C-B</li>
+                    <li>still significantly less extreme than dragonfly compounds</li>
+                  </ul>
+                  <div class="interesting-note">feels like a "controlled" version of the dragonfly concept</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="drug-card" data-drug="3C-B-FLY">
+            <div class="drug-card-inner">
+              <div class="drug-img-wrap">
+                <img src="images/3c-b-fly.png" alt="3C-B-FLY" class="drug-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+                <div class="drug-img-placeholder" style="display:none"><span>⬡</span></div>
+                <div class="drug-img-filename">3c-b-fly.png</div>
+              </div>
+              <div class="drug-content">
+                <div class="drug-name">3C-B-FLY</div>
+                <div class="drug-notes">
+                  <ul>
+                    <li>amphetamine version of 2C-B-FLY</li>
+                    <li>longer duration and more stimulation due to amphetamine backbone</li>
+                    <li>combines rigidity + stimulant structure</li>
+                  </ul>
+                  <div class="interesting-note">stacking rigidity + amphetamine = even longer duration</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="drug-card" data-drug="Difluoro-DragonFLY">
+            <div class="drug-card-inner">
+              <div class="drug-img-wrap">
+                <img src="images/difluoro-dragonfly.png" alt="Difluoro-DragonFLY" class="drug-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+                <div class="drug-img-placeholder" style="display:none"><span>⬡</span></div>
+                <div class="drug-img-filename">difluoro-dragonfly.png</div>
+              </div>
+              <div class="drug-content">
+                <div class="drug-name">Difluoro-DragonFLY</div>
+                <div class="drug-notes">
+                  <ul>
+                    <li>dragonfly variant with fluorine substitutions</li>
+                    <li>halogen atoms increase lipophilicity and receptor binding changes</li>
+                    <li>potency and duration vary but remain extreme</li>
+                  </ul>
+                  <div class="interesting-note">halogen substitution can drastically change how strongly the molecule binds</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- lsd analogs -->
+      <div class="category" id="lsd-analogs">
+        <div class="category-header" onclick="toggleCategory(this)">
+          <span class="category-toggle">▶</span>
+          <span class="category-name">lsd analogs</span>
+          <span class="category-count">2 compounds</span>
+        </div>
+        <div class="category-body">
+
+          <div class="drug-card" data-drug="LSD">
+            <div class="drug-card-inner">
+              <div class="drug-img-wrap">
+                <img src="images/lsd.png" alt="LSD" class="drug-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+                <div class="drug-img-placeholder" style="display:none"><span>⬡</span></div>
+                <div class="drug-img-filename">lsd.png</div>
+              </div>
+              <div class="drug-content">
+                <div class="drug-name">LSD</div>
+                <div class="drug-notes">
+                  <ul>
+                    <li>highly potent psychedelic acting as a <strong>5-HT2A partial agonist</strong> with additional dopamine receptor activity</li>
+                    <li>produces strong visuals, cognitive effects, and emotional depth</li>
+                    <li>very high receptor affinity allows activity at microgram doses</li>
+                  </ul>
+                  <div class="interesting-note">balanced between visual effects and deep psychological changes</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="drug-card" data-drug="AL-LAD">
+            <div class="drug-card-inner">
+              <div class="drug-img-wrap">
+                <img src="images/al-lad.png" alt="AL-LAD" class="drug-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+                <div class="drug-img-placeholder" style="display:none"><span>⬡</span></div>
+                <div class="drug-img-filename">al-lad.png</div>
+              </div>
+              <div class="drug-content">
+                <div class="drug-name">AL-LAD</div>
+                <div class="drug-notes">
+                  <ul>
+                    <li>analog of LSD with slight structural modification affecting receptor interaction</li>
+                    <li>still acts on serotonin receptors but produces less intense cognitive effects</li>
+                    <li>more visually focused with reduced emotional depth and introspection</li>
+                  </ul>
+                  <div class="interesting-note">lighter headspace with stronger visual emphasis compared to LSD</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- nbome / nboh -->
+      <div class="category" id="nbome-nboh">
+        <div class="category-header" onclick="toggleCategory(this)">
+          <span class="category-toggle">▶</span>
+          <span class="category-name">nbome / nboh</span>
+          <span class="category-count">3 compounds</span>
+        </div>
+        <div class="category-body">
+
+          <div class="drug-card" data-drug="25I-NBOMe">
+            <div class="drug-card-inner">
+              <div class="drug-img-wrap">
+                <img src="images/25i-nbome.png" alt="25I-NBOMe" class="drug-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+                <div class="drug-img-placeholder" style="display:none"><span>⬡</span></div>
+                <div class="drug-img-filename">25i-nbome.png</div>
+              </div>
+              <div class="drug-content">
+                <div class="drug-name">25I-NBOMe</div>
+                <div class="drug-notes">
+                  <ul>
+                    <li>extremely potent serotonin receptor agonist active at microgram doses</li>
+                    <li>very high <strong>5-HT2A binding affinity</strong>, often stronger than LSD</li>
+                    <li>steep dose-response curve makes dosing unpredictable</li>
+                  </ul>
+                  <div class="interesting-note">often misrepresented as LSD, increasing risk</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="drug-card" data-drug="25B-NBOMe">
+            <div class="drug-card-inner">
+              <div class="drug-img-wrap">
+                <img src="images/25b-nbome.png" alt="25B-NBOMe" class="drug-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+                <div class="drug-img-placeholder" style="display:none"><span>⬡</span></div>
+                <div class="drug-img-filename">25b-nbome.png</div>
+              </div>
+              <div class="drug-content">
+                <div class="drug-name">25B-NBOMe</div>
+                <div class="drug-notes">
+                  <ul>
+                    <li>similar structure to 25I with bromine substitution</li>
+                    <li>slightly different potency and duration</li>
+                    <li>still highly potent and risky</li>
+                  </ul>
+                  <div class="interesting-note">small substitution changes noticeably affect effects</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="drug-card" data-drug="25E-NBOH">
+            <div class="drug-card-inner">
+              <div class="drug-img-wrap">
+                <img src="images/25e-nboh.png" alt="25E-NBOH" class="drug-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+                <div class="drug-img-placeholder" style="display:none"><span>⬡</span></div>
+                <div class="drug-img-filename">25e-nboh.png</div>
+              </div>
+              <div class="drug-content">
+                <div class="drug-name">25E-NBOH</div>
+                <div class="drug-notes">
+                  <ul>
+                    <li>newer analog related to NBOMe compounds</li>
+                    <li>similar receptor activity but slightly different pharmacokinetics</li>
+                    <li>still active at low doses with similar risks</li>
+                  </ul>
+                  <div class="interesting-note">shows ongoing evolution of NBOMe-type compounds</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- opioids -->
+      <div class="category" id="opioids">
+        <div class="category-header" onclick="toggleCategory(this)">
+          <span class="category-toggle">▶</span>
+          <span class="category-name">opioids</span>
+          <span class="category-count">8 compounds</span>
+        </div>
+        <div class="category-body">
+
+          <div class="drug-card" data-drug="Fentanyl">
+            <div class="drug-card-inner">
+              <div class="drug-img-wrap">
+                <img src="images/fentanyl.png" alt="Fentanyl" class="drug-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+                <div class="drug-img-placeholder" style="display:none"><span>⬡</span></div>
+                <div class="drug-img-filename">fentanyl.png</div>
+              </div>
+              <div class="drug-content">
+                <div class="drug-name">Fentanyl</div>
+                <div class="drug-notes">
+                  <ul>
+                    <li>strong <strong>μ-opioid receptor agonist</strong> causing analgesia and respiratory depression</li>
+                    <li>highly lipophilic, allowing rapid brain penetration</li>
+                  </ul>
+                  <div class="interesting-note">baseline reference for extreme opioid potency</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="drug-card" data-drug="Carfentanil">
+            <div class="drug-card-inner">
+              <div class="drug-img-wrap">
+                <img src="images/carfentanil.png" alt="Carfentanil" class="drug-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+                <div class="drug-img-placeholder" style="display:none"><span>⬡</span></div>
+                <div class="drug-img-filename">carfentanil.png</div>
+              </div>
+              <div class="drug-content">
+                <div class="drug-name">Carfentanil</div>
+                <div class="drug-notes">
+                  <ul>
+                    <li>extremely high μ-opioid receptor affinity (~100x fentanyl)</li>
+                    <li>extremely small doses produce strong effects</li>
+                  </ul>
+                  <div class="interesting-note">potency is near the upper practical limit for opioids</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="drug-card" data-drug="Ohmefentanyl">
+            <div class="drug-card-inner">
+              <div class="drug-img-wrap">
+                <img src="images/ohmefentanyl.png" alt="Ohmefentanyl" class="drug-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+                <div class="drug-img-placeholder" style="display:none"><span>⬡</span></div>
+                <div class="drug-img-filename">ohmefentanyl.png</div>
+              </div>
+              <div class="drug-content">
+                <div class="drug-name">Ohmefentanyl</div>
+                <div class="drug-notes">
+                  <ul>
+                    <li>multiple isomers with varying potency</li>
+                    <li>extremely high receptor affinity depending on structure</li>
+                  </ul>
+                  <div class="interesting-note">tiny structural changes massively affect potency</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="drug-card" data-drug="Acetylfentanyl">
+            <div class="drug-card-inner">
+              <div class="drug-img-wrap">
+                <img src="images/acetylfentanyl.png" alt="Acetylfentanyl" class="drug-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+                <div class="drug-img-placeholder" style="display:none"><span>⬡</span></div>
+                <div class="drug-img-filename">acetylfentanyl.png</div>
+              </div>
+              <div class="drug-content">
+                <div class="drug-name">Acetylfentanyl</div>
+                <div class="drug-notes">
+                  <ul>
+                    <li>slightly weaker than fentanyl but still dangerous</li>
+                    <li>similar mechanism of action</li>
+                  </ul>
+                  <div class="interesting-note">even weaker analogs remain high risk</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="drug-card" data-drug="β-Hydroxythiofentanyl">
+            <div class="drug-card-inner">
+              <div class="drug-img-wrap">
+                <img src="images/beta-hydroxythiofentanyl.png" alt="β-Hydroxythiofentanyl" class="drug-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+                <div class="drug-img-placeholder" style="display:none"><span>⬡</span></div>
+                <div class="drug-img-filename">beta-hydroxythiofentanyl.png</div>
+              </div>
+              <div class="drug-content">
+                <div class="drug-name">β-Hydroxythiofentanyl</div>
+                <div class="drug-notes">
+                  <ul>
+                    <li>includes sulfur substitution and hydroxyl group</li>
+                    <li>changes receptor binding and metabolism</li>
+                  </ul>
+                  <div class="interesting-note">shows how multiple modifications stack effects</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="drug-card" data-drug="4-Fluorofentanyl">
+            <div class="drug-card-inner">
+              <div class="drug-img-wrap">
+                <img src="images/4-fluorofentanyl.png" alt="4-Fluorofentanyl" class="drug-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+                <div class="drug-img-placeholder" style="display:none"><span>⬡</span></div>
+                <div class="drug-img-filename">4-fluorofentanyl.png</div>
+              </div>
+              <div class="drug-content">
+                <div class="drug-name">4-Fluorofentanyl</div>
+                <div class="drug-notes">
+                  <ul>
+                    <li>fluorine substitution alters binding and lipophilicity</li>
+                    <li>changes potency and duration</li>
+                  </ul>
+                  <div class="interesting-note">halogens influence receptor interaction</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="drug-card" data-drug="Isobutyrylfentanyl">
+            <div class="drug-card-inner">
+              <div class="drug-img-wrap">
+                <img src="images/isobutyrylfentanyl.png" alt="Isobutyrylfentanyl" class="drug-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+                <div class="drug-img-placeholder" style="display:none"><span>⬡</span></div>
+                <div class="drug-img-filename">isobutyrylfentanyl.png</div>
+              </div>
+              <div class="drug-content">
+                <div class="drug-name">Isobutyrylfentanyl</div>
+                <div class="drug-notes">
+                  <ul>
+                    <li>less studied analog with similar mechanism</li>
+                    <li>still acts on μ-opioid receptors</li>
+                  </ul>
+                  <div class="interesting-note">many analogs exist with limited data</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="drug-card" data-drug="Etorphine">
+            <div class="drug-card-inner">
+              <div class="drug-img-wrap">
+                <img src="images/etorphine.png" alt="Etorphine" class="drug-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+                <div class="drug-img-placeholder" style="display:none"><span>⬡</span></div>
+                <div class="drug-img-filename">etorphine.png</div>
+              </div>
+              <div class="drug-content">
+                <div class="drug-name">Etorphine</div>
+                <div class="drug-notes">
+                  <ul>
+                    <li>extremely potent μ-opioid agonist</li>
+                    <li>high lipid solubility allows strong central nervous system effects</li>
+                  </ul>
+                  <div class="interesting-note">used only for large animals due to potency</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- stimulants -->
+      <div class="category" id="stimulants">
+        <div class="category-header" onclick="toggleCategory(this)">
+          <span class="category-toggle">▶</span>
+          <span class="category-name">stimulants</span>
+          <span class="category-count">5 compounds</span>
+        </div>
+        <div class="category-body">
+
+          <div class="drug-card" data-drug="MDPV">
+            <div class="drug-card-inner">
+              <div class="drug-img-wrap">
+                <img src="images/mdpv.png" alt="MDPV" class="drug-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+                <div class="drug-img-placeholder" style="display:none"><span>⬡</span></div>
+                <div class="drug-img-filename">mdpv.png</div>
+              </div>
+              <div class="drug-content">
+                <div class="drug-name">MDPV</div>
+                <div class="drug-notes">
+                  <ul>
+                    <li>strong dopamine and norepinephrine reuptake inhibitor</li>
+                    <li>leads to intense stimulation and potential psychosis</li>
+                  </ul>
+                  <div class="interesting-note">extreme dopamine activity drives paranoia</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="drug-card" data-drug="α-PVP">
+            <div class="drug-card-inner">
+              <div class="drug-img-wrap">
+                <img src="images/a-pvp.png" alt="α-PVP" class="drug-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+                <div class="drug-img-placeholder" style="display:none"><span>⬡</span></div>
+                <div class="drug-img-filename">a-pvp.png</div>
+              </div>
+              <div class="drug-content">
+                <div class="drug-name">α-PVP</div>
+                <div class="drug-notes">
+                  <ul>
+                    <li>similar mechanism to MDPV</li>
+                    <li>produces strong stimulation and behavioral changes</li>
+                  </ul>
+                  <div class="interesting-note">overstimulation can lead to erratic behavior</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="drug-card" data-drug="Desoxypipradrol">
+            <div class="drug-card-inner">
+              <div class="drug-img-wrap">
+                <img src="images/desoxypipradrol.png" alt="Desoxypipradrol" class="drug-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+                <div class="drug-img-placeholder" style="display:none"><span>⬡</span></div>
+                <div class="drug-img-filename">desoxypipradrol.png</div>
+              </div>
+              <div class="drug-content">
+                <div class="drug-name">Desoxypipradrol</div>
+                <div class="drug-notes">
+                  <ul>
+                    <li>dopamine/norepinephrine reuptake inhibitor with very long duration</li>
+                    <li>accumulates due to slow metabolism</li>
+                  </ul>
+                  <div class="interesting-note">duration alone creates risk</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="drug-card" data-drug="Methiopropamine">
+            <div class="drug-card-inner">
+              <div class="drug-img-wrap">
+                <img src="images/methiopropamine.png" alt="Methiopropamine" class="drug-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+                <div class="drug-img-placeholder" style="display:none"><span>⬡</span></div>
+                <div class="drug-img-filename">methiopropamine.png</div>
+              </div>
+              <div class="drug-content">
+                <div class="drug-name">Methiopropamine</div>
+                <div class="drug-notes">
+                  <ul>
+                    <li>thiophene analog of methamphetamine</li>
+                    <li>sulfur substitution changes pharmacology</li>
+                  </ul>
+                  <div class="interesting-note">small ring change alters effects noticeably</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="drug-card" data-drug="Naphyrone">
+            <div class="drug-card-inner">
+              <div class="drug-img-wrap">
+                <img src="images/naphyrone.png" alt="Naphyrone" class="drug-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+                <div class="drug-img-placeholder" style="display:none"><span>⬡</span></div>
+                <div class="drug-img-filename">naphyrone.png</div>
+              </div>
+              <div class="drug-content">
+                <div class="drug-name">Naphyrone</div>
+                <div class="drug-notes">
+                  <ul>
+                    <li>triple reuptake inhibitor (dopamine, serotonin, norepinephrine)</li>
+                    <li>longer lasting than typical cathinones</li>
+                  </ul>
+                  <div class="interesting-note">hybrid stimulant profile</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- deliriants -->
+      <div class="category" id="deliriants">
+        <div class="category-header" onclick="toggleCategory(this)">
+          <span class="category-toggle">▶</span>
+          <span class="category-name">deliriants / anticholinergics</span>
+          <span class="category-count">4 compounds</span>
+        </div>
+        <div class="category-body">
+
+          <div class="drug-card" data-drug="Scopolamine">
+            <div class="drug-card-inner">
+              <div class="drug-img-wrap">
+                <img src="images/scopolamine.png" alt="Scopolamine" class="drug-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+                <div class="drug-img-placeholder" style="display:none"><span>⬡</span></div>
+                <div class="drug-img-filename">scopolamine.png</div>
+              </div>
+              <div class="drug-content">
+                <div class="drug-name">Scopolamine</div>
+                <div class="drug-notes">
+                  <ul>
+                    <li>blocks <strong>muscarinic acetylcholine receptors</strong></li>
+                    <li>causes true delirium, confusion, and inability to distinguish reality</li>
+                  </ul>
+                  <div class="interesting-note">removes normal cognitive processing</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="drug-card" data-drug="Datura">
+            <div class="drug-card-inner">
+              <div class="drug-img-wrap">
+                <img src="images/datura.png" alt="Datura" class="drug-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+                <div class="drug-img-placeholder" style="display:none"><span>⬡</span></div>
+                <div class="drug-img-filename">datura.png</div>
+              </div>
+              <div class="drug-content">
+                <div class="drug-name">Datura</div>
+                <div class="drug-notes">
+                  <ul>
+                    <li>contains scopolamine, atropine, and other alkaloids</li>
+                    <li>unpredictable dosing due to variable concentrations</li>
+                  </ul>
+                  <div class="interesting-note">multiple active compounds create chaotic effects</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="drug-card" data-drug="Diphenhydramine">
+            <div class="drug-card-inner">
+              <div class="drug-img-wrap">
+                <img src="images/diphenhydramine.png" alt="Diphenhydramine" class="drug-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+                <div class="drug-img-placeholder" style="display:none"><span>⬡</span></div>
+                <div class="drug-img-filename">diphenhydramine.png</div>
+              </div>
+              <div class="drug-content">
+                <div class="drug-name">Diphenhydramine</div>
+                <div class="drug-notes">
+                  <ul>
+                    <li>antihistamine with anticholinergic effects at high doses</li>
+                    <li>causes delirium, hallucinations, and confusion</li>
+                  </ul>
+                  <div class="interesting-note">normal medication becomes completely different at high dose</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="drug-card" data-drug="Trihexyphenidyl">
+            <div class="drug-card-inner">
+              <div class="drug-img-wrap">
+                <img src="images/trihexyphenidyl.png" alt="Trihexyphenidyl" class="drug-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+                <div class="drug-img-placeholder" style="display:none"><span>⬡</span></div>
+                <div class="drug-img-filename">trihexyphenidyl.png</div>
+              </div>
+              <div class="drug-content">
+                <div class="drug-name">Trihexyphenidyl</div>
+                <div class="drug-notes">
+                  <ul>
+                    <li>used medically for Parkinson's</li>
+                    <li>blocks acetylcholine similarly to other deliriants</li>
+                  </ul>
+                  <div class="interesting-note">misuse can produce delirium</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- cocaine -->
+      <div class="category" id="cocaine">
+        <div class="category-header" onclick="toggleCategory(this)">
+          <span class="category-toggle">▶</span>
+          <span class="category-name">stimulants (cocaine)</span>
+          <span class="category-count">2 compounds</span>
+        </div>
+        <div class="category-body">
+
+          <div class="drug-card" data-drug="Cocaine">
+            <div class="drug-card-inner">
+              <div class="drug-img-wrap">
+                <img src="images/cocaine.png" alt="Cocaine" class="drug-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+                <div class="drug-img-placeholder" style="display:none"><span>⬡</span></div>
+                <div class="drug-img-filename">cocaine.png</div>
+              </div>
+              <div class="drug-content">
+                <div class="drug-name">Cocaine</div>
+                <div class="drug-notes">
+                  <ul>
+                    <li>dopamine reuptake inhibitor</li>
+                    <li>slower onset when snorted</li>
+                  </ul>
+                  <div class="interesting-note">absorption route changes intensity</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="drug-card" data-drug="Crack cocaine">
+            <div class="drug-card-inner">
+              <div class="drug-img-wrap">
+                <img src="images/crack-cocaine.png" alt="Crack cocaine" class="drug-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+                <div class="drug-img-placeholder" style="display:none"><span>⬡</span></div>
+                <div class="drug-img-filename">crack-cocaine.png</div>
+              </div>
+              <div class="drug-content">
+                <div class="drug-name">Crack cocaine</div>
+                <div class="drug-notes">
+                  <ul>
+                    <li>freebase form allowing smoking</li>
+                    <li>faster brain delivery and stronger immediate effects</li>
+                  </ul>
+                  <div class="interesting-note">same molecule, different delivery method changes experience</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- mood stabilizer -->
+      <div class="category" id="mood-stabilizer">
+        <div class="category-header" onclick="toggleCategory(this)">
+          <span class="category-toggle">▶</span>
+          <span class="category-name">mood stabilizer</span>
+          <span class="category-count">1 compound</span>
+        </div>
+        <div class="category-body">
+
+          <div class="drug-card" data-drug="Lithium">
+            <div class="drug-card-inner">
+              <div class="drug-img-wrap">
+                <img src="images/lithium.png" alt="Lithium" class="drug-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+                <div class="drug-img-placeholder" style="display:none"><span>⬡</span></div>
+                <div class="drug-img-filename">lithium.png</div>
+              </div>
+              <div class="drug-content">
+                <div class="drug-name">Lithium</div>
+                <div class="drug-notes">
+                  <ul>
+                    <li>affects multiple neurotransmitter systems and ion channels</li>
+                    <li>very narrow therapeutic window</li>
+                  </ul>
+                  <div class="interesting-note">small physiological changes can cause toxicity</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- shulgin -->
+      <div class="category" id="shulgin">
+        <div class="category-header" onclick="toggleCategory(this)">
+          <span class="category-toggle">▶</span>
+          <span class="category-name">shulgin</span>
+          <span class="category-count">reference</span>
+        </div>
+        <div class="category-body">
+          <div class="text-block">
+            <div class="label">Alexander Shulgin</div>
+            <p>chemist who created and documented many psychedelic compounds</p>
+            <br>
+            <div class="label">PiHKAL</div>
+            <p>focuses on phenethylamines</p>
+            <br>
+            <div class="label">TiHKAL</div>
+            <p>focuses on tryptamines</p>
+            <div class="interesting-note" style="margin-top:12px">combines chemistry, personal experience, and experimental documentation</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- ═══ SECTION: LONGEST DURATION ═══ -->
+    <div class="page-section">
+      <div class="page-section-title" id="longest-duration">longest duration substances ever recorded</div>
+
+      <!-- psychedelics -->
+      <div class="category open">
+        <div class="category-header" onclick="toggleCategory(this)">
+          <span class="category-toggle">▶</span>
+          <span class="category-name">psychedelics (long duration)</span>
+          <span class="category-count">4 compounds</span>
+        </div>
+        <div class="category-body">
+
+          <div class="drug-card" data-drug="Bromo-DragonFLY-duration">
+            <div class="drug-card-inner">
+              <div class="drug-img-wrap">
+                <img src="images/bromo-dragonfly.png" alt="Bromo-DragonFLY" class="drug-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+                <div class="drug-img-placeholder" style="display:none"><span>⬡</span></div>
+                <div class="drug-img-filename">bromo-dragonfly.png</div>
+              </div>
+              <div class="drug-content">
+                <div class="drug-name">Bromo-DragonFLY</div>
+                <div class="drug-notes">
+                  <ul>
+                    <li>extremely potent benzodifuran psychedelic with duration typically 18–36+ hours, sometimes longer in toxic cases</li>
+                    <li>acts primarily as a strong <strong>5-HT2A receptor agonist</strong>, but its rigid benzodifuran structure increases binding affinity and slows dissociation</li>
+                    <li>metabolism is slow and effects can feel "locked in" rather than flowing, which is why people report being unable to "come down" normally</li>
+                    <li>strong <strong>vasoconstriction</strong> (narrowing of blood vessels) due to peripheral serotonin receptor activity, which can lead to tissue damage in severe cases</li>
+                  </ul>
+                  <div class="interesting-note">the rigid structure basically "anchors" it to receptors longer than flexible molecules like 2C-B</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="drug-card" data-drug="DOB-duration">
+            <div class="drug-card-inner">
+              <div class="drug-img-wrap">
+                <img src="images/dob.png" alt="DOB" class="drug-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+                <div class="drug-img-placeholder" style="display:none"><span>⬡</span></div>
+                <div class="drug-img-filename">dob.png</div>
+              </div>
+              <div class="drug-content">
+                <div class="drug-name">DOB</div>
+                <div class="drug-notes">
+                  <ul>
+                    <li>long-duration psychedelic amphetamine lasting ~18–30 hours</li>
+                    <li>acts as a <strong>5-HT2A agonist</strong> with additional stimulant activity due to amphetamine backbone</li>
+                    <li>amphetamine structure slows metabolism and adds physical stimulation (increased heart rate, alertness)</li>
+                    <li>tends to have a more "pushy" and energetic feel compared to classical psychedelics</li>
+                  </ul>
+                  <div class="interesting-note">combining amphetamine + psychedelic receptor activity is what stretches the duration so much</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="drug-card" data-drug="2C-G-duration">
+            <div class="drug-card-inner">
+              <div class="drug-img-wrap">
+                <img src="images/2c-g.png" alt="2C-G" class="drug-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+                <div class="drug-img-placeholder" style="display:none"><span>⬡</span></div>
+                <div class="drug-img-filename">2c-g.png</div>
+              </div>
+              <div class="drug-content">
+                <div class="drug-name">2C-G</div>
+                <div class="drug-notes">
+                  <ul>
+                    <li>rare long-duration 2C compound with effects up to ~30 hours</li>
+                    <li>likely acts similarly on serotonin receptors but with altered metabolism leading to extended duration</li>
+                    <li>less documented than other 2C compounds, but known for prolonged mild-to-moderate psychedelic effects</li>
+                  </ul>
+                  <div class="interesting-note">unusual because most 2C compounds are shorter, this one breaks that pattern</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="drug-card" data-drug="DOI">
+            <div class="drug-card-inner">
+              <div class="drug-img-wrap">
+                <img src="images/doi.png" alt="DOI" class="drug-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+                <div class="drug-img-placeholder" style="display:none"><span>⬡</span></div>
+                <div class="drug-img-filename">doi.png</div>
+              </div>
+              <div class="drug-content">
+                <div class="drug-name">DOI</div>
+                <div class="drug-notes">
+                  <ul>
+                    <li>long-lasting psychedelic amphetamine (~16–30 hours)</li>
+                    <li>very strong <strong>5-HT2A receptor agonist</strong>, often used in research due to its stability and potency</li>
+                    <li>produces intense visual and cognitive effects with prolonged stimulation</li>
+                  </ul>
+                  <div class="interesting-note">often used in lab studies because of how consistently it activates serotonin receptors</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- stimulants long duration -->
+      <div class="category">
+        <div class="category-header" onclick="toggleCategory(this)">
+          <span class="category-toggle">▶</span>
+          <span class="category-name">stimulants (long duration)</span>
+          <span class="category-count">2 compounds</span>
+        </div>
+        <div class="category-body">
+
+          <div class="drug-card" data-drug="Desoxypipradrol-long">
+            <div class="drug-card-inner">
+              <div class="drug-img-wrap">
+                <img src="images/desoxypipradrol.png" alt="Desoxypipradrol" class="drug-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+                <div class="drug-img-placeholder" style="display:none"><span>⬡</span></div>
+                <div class="drug-img-filename">desoxypipradrol.png</div>
+              </div>
+              <div class="drug-content">
+                <div class="drug-name">Desoxypipradrol</div>
+                <div class="drug-notes">
+                  <ul>
+                    <li>extremely long-lasting dopamine/norepinephrine reuptake inhibitor with duration of 24–72+ hours</li>
+                    <li>increases dopamine and norepinephrine by blocking their reuptake, leading to prolonged stimulation</li>
+                    <li>slow metabolism and long half-life cause effects to stack over time</li>
+                    <li>can lead to insomnia, paranoia, and overstimulation due to duration alone</li>
+                  </ul>
+                  <div class="interesting-note">duration is the main danger, not just intensity</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="drug-card" data-drug="Naphyrone-long">
+            <div class="drug-card-inner">
+              <div class="drug-img-wrap">
+                <img src="images/naphyrone.png" alt="Naphyrone" class="drug-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+                <div class="drug-img-placeholder" style="display:none"><span>⬡</span></div>
+                <div class="drug-img-filename">naphyrone.png</div>
+              </div>
+              <div class="drug-content">
+                <div class="drug-name">Naphyrone</div>
+                <div class="drug-notes">
+                  <ul>
+                    <li>long-lasting cathinone stimulant (~6–12+ hours, long for its class)</li>
+                    <li>acts as a <strong>triple reuptake inhibitor</strong> (dopamine, serotonin, norepinephrine)</li>
+                    <li>stronger and longer-lasting than many other cathinones</li>
+                  </ul>
+                  <div class="interesting-note">pushes cathinones closer to cocaine-like duration and intensity</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- outliers -->
+      <div class="category" id="outliers">
+        <div class="category-header" onclick="toggleCategory(this)">
+          <span class="category-toggle">▶</span>
+          <span class="category-name">outliers</span>
+          <span class="category-count">1 compound</span>
+        </div>
+        <div class="category-body">
+
+          <div class="drug-card" data-drug="Ibogaine">
+            <div class="drug-card-inner">
+              <div class="drug-img-wrap">
+                <img src="images/ibogaine.png" alt="Ibogaine" class="drug-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+                <div class="drug-img-placeholder" style="display:none"><span>⬡</span></div>
+                <div class="drug-img-filename">ibogaine.png</div>
+              </div>
+              <div class="drug-content">
+                <div class="drug-name">Ibogaine</div>
+                <div class="drug-notes">
+                  <ul>
+                    <li>duration: 24–48 hours, with after-effects lasting days</li>
+                    <li>extremely complex pharmacology: interacts with <strong>NMDA receptors, opioid receptors, serotonin transporters, and sigma receptors</strong></li>
+                    <li>produces multiple phases: intense visionary phase (dream-like, immersive, often autobiographical) → introspective cognitive phase → long residual stimulation / afterglow</li>
+                    <li>causes <strong>physical ataxia</strong> (loss of coordination), nausea, and reduced ability to move normally</li>
+                    <li>can alter perception of time, memory processing, and sense of self</li>
+                  </ul>
+                  <div class="interesting-note">not just a psychedelic, more like a full-system reset affecting multiple neurotransmitter systems at once</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- ═══ SECTION: SMALLEST DOSE ═══ -->
+    <div class="page-section">
+      <div class="page-section-title" id="smallest-dose">smallest active dose (microgram and below tier)</div>
+
+      <div class="category open">
+        <div class="category-header" onclick="toggleCategory(this)">
+          <span class="category-toggle">▶</span>
+          <span class="category-name">psychedelics (microgram tier)</span>
+          <span class="category-count">3 compounds</span>
+        </div>
+        <div class="category-body">
+
+          <div class="drug-card">
+            <div class="drug-card-inner">
+              <div class="drug-img-wrap">
+                <img src="images/lsd.png" alt="LSD" class="drug-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+                <div class="drug-img-placeholder" style="display:none"><span>⬡</span></div>
+                <div class="drug-img-filename">lsd.png</div>
+              </div>
+              <div class="drug-content">
+                <div class="drug-name">LSD</div>
+                <div class="drug-notes">
+                  <ul>
+                    <li>active at ~50–100 micrograms, threshold even lower</li>
+                    <li>acts primarily as a <strong>5-HT2A partial agonist</strong> with additional dopamine receptor activity</li>
+                    <li>high receptor affinity allows effects at extremely small doses</li>
+                  </ul>
+                  <div class="interesting-note">one of the most efficient brain-active molecules known</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="drug-card">
+            <div class="drug-card-inner">
+              <div class="drug-img-wrap">
+                <img src="images/25i-nbome.png" alt="25I-NBOMe" class="drug-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+                <div class="drug-img-placeholder" style="display:none"><span>⬡</span></div>
+                <div class="drug-img-filename">25i-nbome.png</div>
+              </div>
+              <div class="drug-content">
+                <div class="drug-name">25I-NBOMe</div>
+                <div class="drug-notes">
+                  <ul>
+                    <li>active at ~300–1000 micrograms</li>
+                    <li>very high affinity for <strong>5-HT2A receptors</strong>, often stronger binding than LSD</li>
+                    <li>steep dose-response curve, meaning small increases in dose cause large increases in effect</li>
+                  </ul>
+                  <div class="interesting-note">high potency + steep curve is why it's dangerous</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="drug-card">
+            <div class="drug-card-inner">
+              <div class="drug-img-wrap">
+                <img src="images/bromo-dragonfly.png" alt="Bromo-DragonFLY" class="drug-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+                <div class="drug-img-placeholder" style="display:none"><span>⬡</span></div>
+                <div class="drug-img-filename">bromo-dragonfly.png</div>
+              </div>
+              <div class="drug-content">
+                <div class="drug-name">Bromo-DragonFLY</div>
+                <div class="drug-notes">
+                  <ul>
+                    <li>active in sub-milligram range (~200–800 micrograms)</li>
+                    <li>high receptor affinity combined with long binding duration</li>
+                  </ul>
+                  <div class="interesting-note">combines high potency with extreme duration, which is rare</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="category">
+        <div class="category-header" onclick="toggleCategory(this)">
+          <span class="category-toggle">▶</span>
+          <span class="category-name">opioids (microgram tier)</span>
+          <span class="category-count">4 compounds</span>
+        </div>
+        <div class="category-body">
+
+          <div class="drug-card"><div class="drug-card-inner"><div class="drug-img-wrap"><img src="images/fentanyl.png" class="drug-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="drug-img-placeholder" style="display:none"><span>⬡</span></div><div class="drug-img-filename">fentanyl.png</div></div><div class="drug-content"><div class="drug-name">Fentanyl</div><div class="drug-notes"><ul><li>active at ~100 micrograms</li><li>strong <strong>μ-opioid receptor agonist</strong></li><li>causes analgesia and respiratory depression</li></ul><div class="interesting-note">already extremely potent compared to morphine</div></div></div></div></div>
+
+          <div class="drug-card"><div class="drug-card-inner"><div class="drug-img-wrap"><img src="images/carfentanil.png" class="drug-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="drug-img-placeholder" style="display:none"><span>⬡</span></div><div class="drug-img-filename">carfentanil.png</div></div><div class="drug-content"><div class="drug-name">Carfentanil</div><div class="drug-notes"><ul><li>active at ~1–20 micrograms</li><li>extremely high affinity for μ-opioid receptors</li><li>very small amounts produce strong effects</li></ul><div class="interesting-note">potency is so high that handling requires extreme care</div></div></div></div></div>
+
+          <div class="drug-card"><div class="drug-card-inner"><div class="drug-img-wrap"><img src="images/ohmefentanyl.png" class="drug-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="drug-img-placeholder" style="display:none"><span>⬡</span></div><div class="drug-img-filename">ohmefentanyl.png</div></div><div class="drug-content"><div class="drug-name">Ohmefentanyl</div><div class="drug-notes"><ul><li>active in microgram or lower range depending on isomer</li><li>structural variations (isomers) change potency dramatically</li></ul><div class="interesting-note">shows how tiny structural differences massively affect strength</div></div></div></div></div>
+
+          <div class="drug-card"><div class="drug-card-inner"><div class="drug-img-wrap"><img src="images/etorphine.png" class="drug-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="drug-img-placeholder" style="display:none"><span>⬡</span></div><div class="drug-img-filename">etorphine.png</div></div><div class="drug-content"><div class="drug-name">Etorphine</div><div class="drug-notes"><ul><li>active in microgram range</li><li>extremely strong μ-opioid receptor agonist</li></ul><div class="interesting-note">used for large animals due to potency</div></div></div></div></div>
+
+        </div>
+      </div>
+
+      <div class="category" id="extreme-lower">
+        <div class="category-header" onclick="toggleCategory(this)">
+          <span class="category-toggle">▶</span>
+          <span class="category-name">extreme lower limits</span>
+          <span class="category-count">concept</span>
+        </div>
+        <div class="category-body">
+          <div class="text-block">
+            <ul>
+              <li>some experimental opioids and analogs may act at <strong>sub-microgram or nanogram levels</strong></li>
+              <li>at this scale, dosing becomes physically difficult because amounts are nearly invisible</li>
+            </ul>
+            <div class="interesting-note" style="margin-top:12px">potency eventually becomes limited by physical measurement, not chemistry</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ═══ SECTION: COMBINED UNDERSTANDING ═══ -->
+    <div class="page-section">
+      <div class="page-section-title" id="combined">combined understanding</div>
+
+      <div class="model-grid">
+        <div class="model-card">
+          <div class="mc-label">long duration =</div>
+          <div class="mc-value">"the molecule sticks to receptors or stays in the body for ages"</div>
+        </div>
+        <div class="model-card">
+          <div class="mc-label">high potency =</div>
+          <div class="mc-value">"the molecule fits receptors so well that barely any is needed"</div>
+        </div>
+        <div class="model-card">
+          <div class="mc-label">most extreme compounds =</div>
+          <div class="mc-value">"both at once, which is why they're so dangerous"</div>
+        </div>
+      </div>
+
+      <!-- benzodifurans deep dive -->
+      <div class="category" id="benzodifurans-deep" style="margin-top:20px">
+        <div class="category-header" onclick="toggleCategory(this)">
+          <span class="category-toggle">▶</span>
+          <span class="category-name">benzodifurans deep dive</span>
+        </div>
+        <div class="category-body">
+          <div class="text-block">
+            <div class="label">what is benzodifuran?</div>
+            <p>type of chemical structure, basically a scaffold. benzo = benzene ring, di-furan = two furan rings (5-member rings with oxygen). so benzodifuran = benzene fused to two furans → creates a rigid, locked shape</p>
+            <div class="interesting-note">rigidity makes them act differently than normal phenethylamines</div>
+            <br>
+            <div class="label">why rigidity matters</div>
+            <ul>
+              <li>normal phenethylamines (like 2C-B) are flexible, can wiggle and rotate, bind then let go</li>
+              <li>benzodifurans (like Bromo-DragonFLY) have fused rings → can't rotate, already shaped "correctly" for receptor</li>
+              <li>instead of "bend into shape" → "already in perfect shape"</li>
+            </ul>
+            <div class="interesting-note">rigid = stronger binding, longer effect</div>
+            <br>
+            <div class="label">base phenethylamine structure</div>
+            <p>benzene ring + ethyl chain (–CH2–CH2–) + amine (–NH2 or similar). flexible, metabolized fairly quickly</p>
+            <div class="interesting-note">this is why normal 2Cs are shorter acting</div>
+            <br>
+            <div class="label">benzodifuran changes</div>
+            <p>side chain loops back into ring, two furans fused onto benzene. 3 main effects:</p>
+            <ul>
+              <li>rigidity ↑ → stiff, precise receptor fit</li>
+              <li>receptor binding ↑ → stronger 5-HT2A interaction</li>
+              <li>metabolism ↓ → harder for enzymes to break down</li>
+            </ul>
+            <div class="interesting-note">all 3 together = long, intense effects</div>
+            <br>
+            <div class="label">why Bromo-DragonFLY lasts so long</div>
+            <ul>
+              <li>high receptor affinity → binds strongly</li>
+              <li>slow dissociation → doesn't let go</li>
+              <li>rigid structure → resists breakdown</li>
+            </ul>
+            <div class="interesting-note">effects don't fade normally, they just... continue</div>
+            <br>
+            <div class="label">compare to normal 2Cs</div>
+            <ul>
+              <li>2C-B → flexible, short, weaker binding</li>
+              <li>2C-B-FLY → semi-rigid, longer, stronger binding</li>
+              <li>Bromo-DragonFLY → fully rigid, extremely long, very strong binding</li>
+            </ul>
+            <div class="interesting-note">rigidity stacking = extreme duration</div>
+            <br>
+            <div class="label">FLY vs DragonFLY</div>
+            <div class="quote-block">FLY = "kinda locked"<br>DragonFLY = "fully locked boss form"</div>
+            <br>
+            <div class="label">why tiny changes matter</div>
+            <ul>
+              <li>receptors are 3D</li>
+              <li>tiny tweaks (add ring, swap O→S, add F) → massive effect</li>
+              <li>can change potency, duration, metabolism</li>
+            </ul>
+            <div class="interesting-note">chemistry is wild, a tiny atom swap can break or enhance everything</div>
+            <br>
+            <div class="label">mental model</div>
+            <ul>
+              <li>flexible molecule → shorter, softer</li>
+              <li>rigid molecule → longer, stronger</li>
+              <li>more receptor affinity → more potent</li>
+              <li>slower metabolism → longer duration</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- analog patterns -->
+      <div class="category" id="analog-patterns" style="margin-top:16px">
+        <div class="category-header" onclick="toggleCategory(this)">
+          <span class="category-toggle">▶</span>
+          <span class="category-name">analog patterns (general concept)</span>
+        </div>
+        <div class="category-body">
+          <div class="text-block">
+            <div class="label">what is an analog?</div>
+            <p>an analog = a compound that's chemically very similar to another but with small changes. small tweaks can massively change: potency, duration, toxicity, receptor selectivity</p>
+            <div class="interesting-note">tiny atomic swap or side chain change → completely different effect</div>
+            <br>
+            <div class="label">how analogs happen in practice</div>
+            <ul>
+              <li><strong>phenethylamines / psychedelics:</strong> 2C-B → 2C-E → 2C-G → all small substitutions on same base ring. FLY vs DragonFLY → adding fused rings changes rigidity/duration. halogen substitutions (Cl, F, Br) → change potency and visuals. thio substitutions (O → S) → heavier, more body load</li>
+              <li><strong>tryptamines / LSD analogs:</strong> LSD → AL-LAD → ETH-LAD → small tweaks on the indole ring or N-substitutions. changes headspace: visuals vs emotional vs cognitive effects</li>
+              <li><strong>opioids:</strong> fentanyl → acetylfentanyl → carfentanil → ohmefentanil → etc. N-substitutions, halogens, thio vs oxy → potency skyrockets or drops. carfentanil ~100x fentanyl, ohmefentanil even higher</li>
+              <li><strong>stimulants:</strong> MDPV → α-PVP → desoxypipradrol → methiopropamine. small substitutions on phenyl or pyrrolidine ring → longer duration, more erratic effects</li>
+              <li><strong>deliriants / anticholinergics:</strong> scopolamine → other tropane analogs → similar delirium but different potency/duration. Diphenhydramine → similar antihistamine analogs → normal med vs full delirium at high dose</li>
+              <li><strong>misc / experimental:</strong> benzodifurans: 2C-B-FLY → 3C-B-FLY → Bromo-DragonFLY. NBOMe/NBOH: 25I-NBOMe → 25B-NBOMe → 25E-NBOH. small substitutions = active at micrograms vs milligrams</li>
+            </ul>
+            <div class="interesting-note">"analog explosion" is why research chemicals are so unpredictable</div>
+            <br>
+            <div class="label">factors changed by analogs</div>
+            <ul>
+              <li><strong>potency</strong> → binds receptor stronger/weaker</li>
+              <li><strong>duration</strong> → metabolism slowed by rigidity, halogens, or ring fusion</li>
+              <li><strong>toxicity</strong> → small change = huge increase in risk</li>
+              <li><strong>psychological profile</strong> → visuals, euphoria, headspace can shift</li>
+              <li><strong>physical profile</strong> → vasoconstriction, body load, stimulation, sedation</li>
+            </ul>
+            <div class="interesting-note">"analog" doesn't just mean similar—it's like a sibling with a totally different personality</div>
+            <br>
+            <div class="label">mental model for all compounds</div>
+            <p>base structure = starting point. analog = tweak on that structure. tweak types:</p>
+            <ul>
+              <li>ring fusion (rigidity)</li>
+              <li>halogen substitution (F, Cl, Br)</li>
+              <li>thio/oxy swap (S ↔ O)</li>
+              <li>N-substitution (fentanyl, tryptamines)</li>
+              <li>alkyl/ethyl tweaks on indole or phenyl rings</li>
+            </ul>
+            <p>result = new potency, duration, toxicity, and effects</p>
+            <div class="interesting-note">with fentanyl analogs, a microgram difference can be the line between "high" and death; with psychedelics, a single atom tweak can flip visuals/emotional weight</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- chemistry patterns -->
+      <div class="category">
+        <div class="category-header" onclick="toggleCategory(this)">
+          <span class="category-toggle">▶</span>
+          <span class="category-name">chemistry patterns (my understanding)</span>
+        </div>
+        <div class="category-body">
+          <div class="text-block">
+            <ul>
+              <li><strong>benzodifurans</strong> — "rigid phenethylamines that bind longer and last way longer"</li>
+              <li><strong>thio substitution</strong> — "swap oxygen for sulfur → changes metabolism and feel, often heavier"</li>
+              <li><strong>fluoro/chloro</strong> — "add halogens → changes potency, binding, and duration"</li>
+              <li><strong>n-substitution</strong> — "small nitrogen changes → massive potency differences, especially in opioids"</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- ═══ SECTION: ANALOG MASTER TABLE ═══ -->
+    <div class="page-section">
+      <div class="page-section-title">analog master table (families, patterns, effects)</div>
+
+      <!-- phenethylamines table -->
+      <div class="category open" id="table-psychedelics">
+        <div class="category-header" onclick="toggleCategory(this)">
+          <span class="category-toggle">▶</span>
+          <span class="category-name">psychedelics / phenethylamines</span>
+        </div>
+        <div class="category-body">
+          <div class="analog-table-wrap">
+            <table class="analog-table">
+              <thead><tr><th>base compound</th><th>analog</th><th>type of change</th><th>effect of change</th></tr></thead>
+              <tbody>
+                <tr><td>2C-B</td><td>2C-E</td><td>ethyl group substitution</td><td>stronger, more intense, less "fun", more analytical</td></tr>
+                <tr><td>2C-B</td><td>2C-G</td><td>chain extension</td><td>massively increased duration (up to ~30h)</td></tr>
+                <tr><td>2C-B</td><td>2C-T-7</td><td>thio substitution (O → S)</td><td>heavier body load, more unpredictable</td></tr>
+                <tr><td>2C-B</td><td>2C-B-FLY</td><td>ring fusion (benzodifuran)</td><td>increased rigidity, longer duration</td></tr>
+                <tr><td>2C-B-FLY</td><td>3C-B-FLY</td><td>amphetamine backbone added</td><td>longer duration + more stimulation</td></tr>
+                <tr><td>2C-B-FLY</td><td>Bromo-DragonFLY</td><td>full ring fusion (max rigidity)</td><td>extreme duration + potency</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="interesting-note" style="margin-top:12px">phenethylamines show how adding rigidity or small substitutions completely changes duration and intensity</div>
+        </div>
+      </div>
+
+      <!-- psychedelic amphetamines table -->
+      <div class="category" id="table-amphetamines">
+        <div class="category-header" onclick="toggleCategory(this)">
+          <span class="category-toggle">▶</span>
+          <span class="category-name">psychedelic amphetamines</span>
+        </div>
+        <div class="category-body">
+          <div class="analog-table-wrap">
+            <table class="analog-table">
+              <thead><tr><th>base compound</th><th>analog</th><th>type of change</th><th>effect of change</th></tr></thead>
+              <tbody>
+                <tr><td>DOM</td><td>DOB</td><td>bromine substitution</td><td>increased potency + long duration</td></tr>
+                <tr><td>DOB</td><td>DOI</td><td>iodine substitution</td><td>altered potency, still long duration</td></tr>
+                <tr><td>TMA</td><td>TMA-6</td><td>methoxy substitutions</td><td>subtle but extended psychedelic effects</td></tr>
+                <tr><td>base amphetamine</td><td>Aleph-1</td><td>sulfur substitution</td><td>heavier effects, less studied</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="interesting-note" style="margin-top:12px">amphetamine backbone consistently increases duration compared to non-amphetamine psychedelics</div>
+        </div>
+      </div>
+
+      <!-- lsd / tryptamines table -->
+      <div class="category" id="table-lsd">
+        <div class="category-header" onclick="toggleCategory(this)">
+          <span class="category-toggle">▶</span>
+          <span class="category-name">lsd / tryptamine analogs</span>
+        </div>
+        <div class="category-body">
+          <div class="analog-table-wrap">
+            <table class="analog-table">
+              <thead><tr><th>base compound</th><th>analog</th><th>type of change</th><th>effect of change</th></tr></thead>
+              <tbody>
+                <tr><td>LSD</td><td>AL-LAD</td><td>allyl substitution</td><td>more visual, less emotional intensity</td></tr>
+                <tr><td>LSD</td><td>ETH-LAD</td><td>ethyl substitution</td><td>stronger visuals, sometimes more intense</td></tr>
+                <tr><td>tryptamine base</td><td>5-MeO-DMT</td><td>methoxy substitution</td><td>extremely intense, short duration</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="interesting-note" style="margin-top:12px">tiny changes to side chains shift emotional vs visual balance</div>
+        </div>
+      </div>
+
+      <!-- nbome table -->
+      <div class="category" id="table-nbome">
+        <div class="category-header" onclick="toggleCategory(this)">
+          <span class="category-toggle">▶</span>
+          <span class="category-name">nbome / nboh</span>
+        </div>
+        <div class="category-body">
+          <div class="analog-table-wrap">
+            <table class="analog-table">
+              <thead><tr><th>base compound</th><th>analog</th><th>type of change</th><th>effect of change</th></tr></thead>
+              <tbody>
+                <tr><td>2C-I</td><td>25I-NBOMe</td><td>NBOMe substitution</td><td>huge potency increase (microgram active)</td></tr>
+                <tr><td>2C-B</td><td>25B-NBOMe</td><td>bromine + NBOMe</td><td>similar but slightly altered potency</td></tr>
+                <tr><td>NBOMe</td><td>NBOH variants</td><td>hydroxyl substitution</td><td>altered duration + slightly different binding</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="interesting-note" style="margin-top:12px">NBOMe modification massively increases receptor affinity</div>
+        </div>
+      </div>
+
+      <!-- opioids table -->
+      <div class="category" id="table-opioids">
+        <div class="category-header" onclick="toggleCategory(this)">
+          <span class="category-toggle">▶</span>
+          <span class="category-name">opioids (fentanyl family)</span>
+        </div>
+        <div class="category-body">
+          <div class="analog-table-wrap">
+            <table class="analog-table">
+              <thead><tr><th>base compound</th><th>analog</th><th>type of change</th><th>effect of change</th></tr></thead>
+              <tbody>
+                <tr><td>fentanyl</td><td>acetylfentanyl</td><td>acetyl substitution</td><td>slightly weaker but still dangerous</td></tr>
+                <tr><td>fentanyl</td><td>carfentanil</td><td>ester modification</td><td>~100x potency increase</td></tr>
+                <tr><td>fentanyl</td><td>ohmefentanyl</td><td>structural isomer changes</td><td>extreme potency variation</td></tr>
+                <tr><td>fentanyl</td><td>β-hydroxythiofentanyl</td><td>thio + hydroxyl</td><td>altered potency + metabolism</td></tr>
+                <tr><td>fentanyl</td><td>4-fluorofentanyl</td><td>halogen substitution</td><td>changes potency/duration</td></tr>
+                <tr><td>fentanyl</td><td>isobutyrylfentanyl</td><td>side chain change</td><td>less studied but still active</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="interesting-note" style="margin-top:12px">fentanyl analogs show the most extreme potency scaling from tiny changes</div>
+        </div>
+      </div>
+
+      <!-- ultra-potent opioids -->
+      <div class="category" id="table-ultra-potent">
+        <div class="category-header" onclick="toggleCategory(this)">
+          <span class="category-toggle">▶</span>
+          <span class="category-name">ultra-potent opioids</span>
+        </div>
+        <div class="category-body">
+          <div class="analog-table-wrap">
+            <table class="analog-table">
+              <thead><tr><th>base compound</th><th>analog</th><th>type of change</th><th>effect of change</th></tr></thead>
+              <tbody>
+                <tr><td>morphine-like</td><td>etorphine</td><td>major structural modification</td><td>extreme potency (microgram range)</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="interesting-note" style="margin-top:12px">opioid receptors are highly sensitive to small structural changes</div>
+        </div>
+      </div>
+
+      <!-- stimulants table -->
+      <div class="category" id="table-stimulants">
+        <div class="category-header" onclick="toggleCategory(this)">
+          <span class="category-toggle">▶</span>
+          <span class="category-name">stimulants</span>
+        </div>
+        <div class="category-body">
+          <div class="analog-table-wrap">
+            <table class="analog-table">
+              <thead><tr><th>base compound</th><th>analog</th><th>type of change</th><th>effect of change</th></tr></thead>
+              <tbody>
+                <tr><td>cathinone</td><td>MDPV</td><td>pyrrolidine ring</td><td>very strong dopamine activity</td></tr>
+                <tr><td>MDPV</td><td>α-PVP</td><td>chain modification</td><td>similar but more chaotic effects</td></tr>
+                <tr><td>methamphetamine</td><td>methiopropamine</td><td>thiophene substitution</td><td>altered subjective effects</td></tr>
+                <tr><td>stimulant base</td><td>desoxypipradrol</td><td>structural rigidity</td><td>extremely long duration</td></tr>
+                <tr><td>cathinone</td><td>naphyrone</td><td>extended ring system</td><td>longer duration + stronger effects</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="interesting-note" style="margin-top:12px">stimulant analogs often change duration and psychological stability</div>
+        </div>
+      </div>
+
+      <!-- deliriants table -->
+      <div class="category" id="table-deliriants">
+        <div class="category-header" onclick="toggleCategory(this)">
+          <span class="category-toggle">▶</span>
+          <span class="category-name">deliriants / anticholinergics</span>
+        </div>
+        <div class="category-body">
+          <div class="analog-table-wrap">
+            <table class="analog-table">
+              <thead><tr><th>base compound</th><th>analog</th><th>type of change</th><th>effect of change</th></tr></thead>
+              <tbody>
+                <tr><td>scopolamine</td><td>related tropanes</td><td>alkaloid variation</td><td>delirium with different potency</td></tr>
+                <tr><td>antihistamines</td><td>diphenhydramine</td><td>anticholinergic effects</td><td>delirium at high dose</td></tr>
+                <tr><td>trihexyphenidyl</td><td>similar anticholinergics</td><td>receptor targeting</td><td>similar delirium effects</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="interesting-note" style="margin-top:12px">blocking acetylcholine consistently leads to delirium regardless of compound</div>
+        </div>
+      </div>
+
+      <!-- cocaine table -->
+      <div class="category" id="table-cocaine">
+        <div class="category-header" onclick="toggleCategory(this)">
+          <span class="category-toggle">▶</span>
+          <span class="category-name">cocaine / stimulants (form-based analog)</span>
+        </div>
+        <div class="category-body">
+          <div class="analog-table-wrap">
+            <table class="analog-table">
+              <thead><tr><th>base compound</th><th>analog</th><th>type of change</th><th>effect of change</th></tr></thead>
+              <tbody>
+                <tr><td>cocaine (salt)</td><td>crack cocaine</td><td>freebase conversion</td><td>faster onset, stronger peak</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="interesting-note" style="margin-top:12px">not all "analogs" are structural, some are just different forms affecting delivery</div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- ═══ SECTION: SUMMARY ═══ -->
+    <div class="page-section">
+      <div class="page-section-title" id="summary">overall analog patterns (summary)</div>
+
+      <div class="text-block">
+        <ul>
+          <li>ring fusion → more rigidity → longer duration</li>
+          <li>halogen substitution → changes potency + binding</li>
+          <li>thio substitution (O → S) → heavier effects, different metabolism</li>
+          <li>N-substitution → massive potency shifts (especially opioids)</li>
+          <li>amphetamine backbone → longer duration + stimulation</li>
+          <li>NBOMe modification → extreme potency increase</li>
+        </ul>
+      </div>
+
+      <div class="text-block" style="margin-top:16px">
+        <div class="label">meta understanding</div>
+        <p>drugs can be understood in 3 layers:</p>
+        <ul>
+          <li><strong>structure</strong> → what it is chemically (shape, rigidity, substitutions)</li>
+          <li><strong>receptor</strong> → what it binds to (5-HT2A, dopamine, μ-opioid, etc.)</li>
+          <li><strong>effect</strong> → what it feels like (visuals, stimulation, sedation, delirium)</li>
+        </ul>
+        <div class="interesting-note">if you know structure + receptor, you can usually predict the effect pretty well</div>
+      </div>
+
+      <!-- favorites -->
+      <div class="page-section-title" id="favorites" style="margin-top:32px">favorites / most interesting compounds</div>
+
+      <div class="model-grid">
+        <div class="model-card">
+          <div class="mc-label">bromo-dragonfly</div>
+          <div class="mc-value">coolest structure (benzodifuran, fully rigid) but also one of the scariest because of duration and vasoconstriction</div>
+          <div class="mc-note">feels like the "final form" of phenethylamines</div>
+        </div>
+        <div class="model-card">
+          <div class="mc-label">2c-b</div>
+          <div class="mc-value">most "balanced" psychedelic, good mix of visuals and euphoria without being too overwhelming</div>
+          <div class="mc-note">good reference point for comparing other 2Cs</div>
+        </div>
+        <div class="model-card">
+          <div class="mc-label">2c-e</div>
+          <div class="mc-value">more serious and analytical compared to 2c-b, stronger headspace and visuals</div>
+          <div class="mc-note">shows how one substitution can make a compound way less "recreational"</div>
+        </div>
+        <div class="model-card">
+          <div class="mc-label">al-lad</div>
+          <div class="mc-value">more visual focused and lighter mentally compared to lsd</div>
+          <div class="mc-note">good example of how lsd analogs shift emotional vs visual effects</div>
+        </div>
+        <div class="model-card">
+          <div class="mc-label">25i-nbome</div>
+          <div class="mc-value">insanely potent for how small the dose is, but risky because of steep dose curve</div>
+          <div class="mc-note">shows how receptor affinity can get pushed really far</div>
+        </div>
+        <div class="model-card">
+          <div class="mc-label">carfentanil</div>
+          <div class="mc-value">absurd potency, microgram range, used for large animals</div>
+          <div class="mc-note">shows the extreme end of opioid analog scaling</div>
+        </div>
+        <div class="model-card">
+          <div class="mc-label">ohmefentanyl</div>
+          <div class="mc-value">extremely potent fentanyl analog with multiple isomers that can vary a lot in strength</div>
+          <div class="mc-note">shows how tiny structural/isomer changes can massively change potency even within the same compound</div>
+        </div>
+        <div class="model-card">
+          <div class="mc-label">desoxypipradrol</div>
+          <div class="mc-value">duration is the main thing, can last multiple days</div>
+          <div class="mc-note">shows how duration alone can make something dangerous</div>
+        </div>
+        <div class="model-card">
+          <div class="mc-label">diphenhydramine</div>
+          <div class="mc-value">normal allergy med but turns into full delirium at high doses</div>
+          <div class="mc-note">shows how dose completely changes drug class feel</div>
+        </div>
+      </div>
+
+    </div>
+
+    <div id="no-results">no compounds found matching your search</div>
+
+  </div>
 </div>
+
 <script src="script.js"></script>
 </body>
 </html>
