@@ -20,41 +20,41 @@
   <div id="sidebar-nav">
 
     <div class="nav-section-label">// main notes</div>
-    <a class="nav-link" onclick="scrollTo('psychedelics-phenethylamines')">psychedelics / phenethylamines</a>
-    <a class="nav-link" onclick="scrollTo('benzodifurans')">benzodifurans (dragonfly)</a>
-    <a class="nav-link" onclick="scrollTo('lsd-analogs')">lsd analogs</a>
-    <a class="nav-link" onclick="scrollTo('nbome-nboh')">nbome / nboh</a>
-    <a class="nav-link" onclick="scrollTo('opioids')">opioids</a>
-    <a class="nav-link" onclick="scrollTo('stimulants')">stimulants</a>
-    <a class="nav-link" onclick="scrollTo('deliriants')">deliriants / anticholinergics</a>
-    <a class="nav-link" onclick="scrollTo('cocaine')">cocaine / stimulants</a>
-    <a class="nav-link" onclick="scrollTo('mood-stabilizer')">mood stabilizer</a>
-    <a class="nav-link" onclick="scrollTo('shulgin')">shulgin</a>
+    <a class="nav-link" onclick="scrollToSection('psychedelics-phenethylamines')">psychedelics / phenethylamines</a>
+    <a class="nav-link" onclick="scrollToSection('benzodifurans')">benzodifurans (dragonfly)</a>
+    <a class="nav-link" onclick="scrollToSection('lsd-analogs')">lsd analogs</a>
+    <a class="nav-link" onclick="scrollToSection('nbome-nboh')">nbome / nboh</a>
+    <a class="nav-link" onclick="scrollToSection('opioids')">opioids</a>
+    <a class="nav-link" onclick="scrollToSection('stimulants')">stimulants</a>
+    <a class="nav-link" onclick="scrollToSection('deliriants')">deliriants / anticholinergics</a>
+    <a class="nav-link" onclick="scrollToSection('cocaine')">cocaine / stimulants</a>
+    <a class="nav-link" onclick="scrollToSection('mood-stabilizer')">mood stabilizer</a>
+    <a class="nav-link" onclick="scrollToSection('shulgin')">shulgin</a>
 
     <div class="nav-section-label">// duration</div>
-    <a class="nav-link" onclick="scrollTo('longest-duration')">longest duration ever</a>
-    <a class="nav-link" onclick="scrollTo('outliers')">outliers (ibogaine)</a>
+    <a class="nav-link" onclick="scrollToSection('longest-duration')">longest duration ever</a>
+    <a class="nav-link" onclick="scrollToSection('outliers')">outliers (ibogaine)</a>
 
     <div class="nav-section-label">// potency</div>
-    <a class="nav-link" onclick="scrollTo('smallest-dose')">smallest active dose</a>
-    <a class="nav-link" onclick="scrollTo('extreme-lower')">extreme lower limits</a>
+    <a class="nav-link" onclick="scrollToSection('smallest-dose')">smallest active dose</a>
+    <a class="nav-link" onclick="scrollToSection('extreme-lower')">extreme lower limits</a>
 
     <div class="nav-section-label">// understanding</div>
-    <a class="nav-link" onclick="scrollTo('combined')">combined understanding</a>
-    <a class="nav-link" onclick="scrollTo('benzodifurans-deep')">benzodifurans deep dive</a>
-    <a class="nav-link" onclick="scrollTo('analog-patterns')">analog patterns</a>
+    <a class="nav-link" onclick="scrollToSection('combined')">combined understanding</a>
+    <a class="nav-link" onclick="scrollToSection('benzodifurans-deep')">benzodifurans deep dive</a>
+    <a class="nav-link" onclick="scrollToSection('analog-patterns')">analog patterns</a>
 
     <div class="nav-section-label">// master table</div>
-    <a class="nav-link" onclick="scrollTo('table-psychedelics')">phenethylamines table</a>
-    <a class="nav-link" onclick="scrollTo('table-amphetamines')">psychedelic amphetamines</a>
-    <a class="nav-link" onclick="scrollTo('table-lsd')">lsd / tryptamines table</a>
-    <a class="nav-link" onclick="scrollTo('table-nbome')">nbome / nboh table</a>
-    <a class="nav-link" onclick="scrollTo('table-opioids')">opioids table</a>
-    <a class="nav-link" onclick="scrollTo('table-stimulants')">stimulants table</a>
-    <a class="nav-link" onclick="scrollTo('table-deliriants')">deliriants table</a>
-    <a class="nav-link" onclick="scrollTo('table-cocaine')">cocaine table</a>
-    <a class="nav-link" onclick="scrollTo('summary')">overall summary</a>
-    <a class="nav-link" onclick="scrollTo('favorites')">favorites / most interesting</a>
+    <a class="nav-link" onclick="scrollToSection('table-psychedelics')">phenethylamines table</a>
+    <a class="nav-link" onclick="scrollToSection('table-amphetamines')">psychedelic amphetamines</a>
+    <a class="nav-link" onclick="scrollToSection('table-lsd')">lsd / tryptamines table</a>
+    <a class="nav-link" onclick="scrollToSection('table-nbome')">nbome / nboh table</a>
+    <a class="nav-link" onclick="scrollToSection('table-opioids')">opioids table</a>
+    <a class="nav-link" onclick="scrollToSection('table-stimulants')">stimulants table</a>
+    <a class="nav-link" onclick="scrollToSection('table-deliriants')">deliriants table</a>
+    <a class="nav-link" onclick="scrollToSection('table-cocaine')">cocaine table</a>
+    <a class="nav-link" onclick="scrollToSection('summary')">overall summary</a>
+    <a class="nav-link" onclick="scrollToSection('favorites')">favorites / most interesting</a>
   </div>
 </nav>
 
@@ -63,6 +63,7 @@
 
   <!-- TOP BAR -->
   <div id="topbar">
+    <button id="menu-toggle" onclick="toggleSidebar()" aria-label="Toggle menu">☰</button>
     <div id="search-wrap">
       <input type="text" id="main-search" placeholder="search all compounds, notes, mechanisms...">
     </div>

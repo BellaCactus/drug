@@ -4,14 +4,23 @@ function toggleCategory(header) {
   cat.classList.toggle('open');
 }
 
+// ─── MOBILE SIDEBAR ───
+function toggleSidebar() {
+  document.getElementById('sidebar').classList.toggle('open');
+}
+
 // ─── SIDEBAR SCROLL ───
-function scrollTo(id) {
+function scrollToSection(id) {
   const el = document.getElementById(id);
   if (el) {
     el.scrollIntoView({ behavior: 'smooth', block: 'start' });
     // auto-open if it's a category
     if (el.classList.contains('category') && !el.classList.contains('open')) {
       el.classList.add('open');
+    }
+    // auto-close sidebar on mobile
+    if (window.innerWidth <= 768) {
+      document.getElementById('sidebar').classList.remove('open');
     }
   }
 }
